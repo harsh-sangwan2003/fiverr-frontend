@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.scss'
 import '../../app.scss'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 
     const [active, setActive] = useState(false);
     const [open, setOpen] = useState(false);
+
+    const { pathname } = useLocation();
 
     const isActive = () => {
 
@@ -32,7 +34,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className={active ? "navbar active" : "navbar"}>
+        <div className={pathname !== '/' || active ? "navbar active" : "navbar"}>
 
             <div className="container">
 
@@ -60,14 +62,14 @@ const Navbar = () => {
                                         {
                                             currentUser?.isSeller && (
                                                 <>
-                                                    <span>Gigs</span>
-                                                    <span>Add New Gig</span>
+                                                    <Link to="/mygigs" className='link'>Gigs</Link>
+                                                    <Link to="/add" className='link'>Add New Gig</Link>
                                                 </>
                                             )
                                         }
-                                        <span>Orders</span>
-                                        <span>Messages</span>
-                                        <span>Logout</span>
+                                        <Link to="/orders" className='link'>Orders</Link>
+                                        <Link to="/messages" className='link'>Messages</Link>
+                                        <Link to="/" className='link'>Logout</Link>
                                     </div>
                                 }
                             </div>
@@ -76,13 +78,38 @@ const Navbar = () => {
                 </div>
 
             </div>
-            {active && (
+            {(active || pathname!=="/") && (
                 <>
                     <hr />
 
                     <div className="menu">
-                        <span>Test</span>
-                        <span>Test2</span>
+                        <Link to="/" className='link menulink'>
+                            Graphics & Design
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Video & Animation
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Writing & Translation
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            AI Services
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Digital Marketing
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Music & Audio
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Programming & Tech
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Business
+                        </Link>
+                        <Link to="/" className='link menulink'>
+                            Lifestyle
+                        </Link>
                     </div>
                 </>)
             }
