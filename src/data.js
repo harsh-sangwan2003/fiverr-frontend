@@ -173,7 +173,16 @@ export const gigs = [
         username: "Waverly Schaefer",
     },
     {
-        id: 8,
+        id: 3,
+        img: "https://images.pexels.com/photos/8797307/pexels-photo-8797307.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        pp: "https://images.pexels.com/photos/1062280/pexels-photo-1062280.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        desc: "I will creating unique ai generated artworks mid journey ai artist",
+        price: 112,
+        star: 5,
+        username: "Carol Steve",
+    },
+    {
+        id: 9,
         img: "https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=1600",
         pp: "https://images.pexels.com/photos/1699159/pexels-photo-1699159.jpeg?auto=compress&cs=tinysrgb&w=1600",
         desc: "I will create custom art using midjourney generator",
