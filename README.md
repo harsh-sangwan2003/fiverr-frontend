@@ -37,7 +37,7 @@ You may also see any lint errors in the console.
 
 ## Usage
 
-This project is a clone of HasteBin.
+Fiverr project: React.js, React Router DOM, SCSS, CSS, React Query. Seamlessly connects freelancers, clients, redefining digital collaboration through agile navigation.
 
 Click on
 
